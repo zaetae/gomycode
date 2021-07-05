@@ -1,15 +1,17 @@
 class bank:
-    def __init__(self,original_sum,deposit_money,withdraw_money):
-        self.deposit_money=deposit_money
+    def __init__(self,original_sum):
         self.original_sum=original_sum
-        self.withdraw_money=withdraw_money
-    def deposit(self):
+    def deposit(self,deposit_money):
+        self.deposit_money=deposit_money
         new_sum=self.original_sum+self.deposit_money
         print(new_sum)
-    def withdraw(self):
+    def withdraw(self,withdraw_money):
+        self.withdraw_money=withdraw_money
         new_sum=self.original_sum-self.withdraw_money
         print(new_sum)
-bank(550,37,500)
+a=bank(550)
+a.withdraw(300)
+a.deposit(300)
         
         
         

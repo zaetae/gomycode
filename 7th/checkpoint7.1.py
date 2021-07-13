@@ -16,17 +16,15 @@ print(df)
 #extract name and score columns
 d3 = df.iloc[:, 0:2]
 print(d3)
-d2={'name' :["Suresh"],'score': [15.5],'attempts': [1],'qualify': ['yes']}
-k=pd.DataFrame(d2)
-df=pd.concat([df,k])
+df.loc['k']=["Suresh",15.5,1,'yes']
 print(df)
-df=df
 df=df.drop("attempts",axis=1)
 print(df)
 #create new dict for success
 d1={'Success':[]}
 
 for i in df.itertuples():
+    print(i)
     if i[2]>=10:
         d1['Success'].append(1)
     else:
